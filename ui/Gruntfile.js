@@ -335,7 +335,7 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'app/bower_components/bootstrap/dist',
+                        cwd: 'app/bower_components/fontawesome',
                         src: 'fonts/*',
                         dest: '<%= yeoman.dist %>'
                     }
@@ -346,6 +346,20 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            }
+        },
+
+        less: {
+            appLess: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'app/styles/',
+                        src: '**/*.less',
+                        dest: 'app/styles/',
+                        ext: '.css'
+                    }
+                ]
             }
         },
 
@@ -406,6 +420,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'less:appLess',
         'wiredep',
         'useminPrepare',
         'concurrent:dist',
