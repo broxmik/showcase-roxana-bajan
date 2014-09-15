@@ -1,9 +1,7 @@
 package utils;
 
 /**
- * <p>Copyright (c) 2009, Orsyp Logiciels Inc.</p>
- *
- * @author rbj
+ * @author Roxana
  * @version 1.0
  */
 public class Variables {
