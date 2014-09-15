@@ -8,5 +8,5 @@ package utils;
  */
 public class Variables {
 
-    public static final String PATH_TO_DEV_UI = "ui/app";
+    public static final String PATH_TO_DEV_UI = "ui/app/";
 }

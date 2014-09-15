@@ -26,7 +26,7 @@ public class Application extends Controller {
     public static Result dev(String resource) {
     	
     	// Only available in DEV
-    	if(play.api.Play.isProd(play.api.Play.current())) {
+    	if(play.api.Play.isDev(play.api.Play.current())) {
     		
             String fileName;
             try {
