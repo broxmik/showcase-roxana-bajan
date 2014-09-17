@@ -22,4 +22,14 @@ public class ResourceServiceImpl implements ResourceService{
         }
         return new File(Variables.PATH_TO_DEV_UI + fileName);
     }
+
+    @Override
+    public File getNotFoundFile() {
+        return new File(Variables.PATH_TO_DEV_UI + "404.html");
+    }
+
+    @Override
+    public File getServerErrorFile() {
+        return new File(Variables.PATH_TO_DEV_UI + "500.html");
+    }
 }

@@ -1,13 +1,13 @@
 # API
-GET     /api/wip                    controllers.Application.index
+GET     /api/wip                    @controllers.Application.index()
 
 # UI DEV
-GET     /dev/                       controllers.Application.dev(file="index.html")
-GET     /dev/*file                  controllers.Application.dev(file)
+GET     /dev/                       @controllers.Application.dev(file="index.html")
+GET     /dev/*file                  @controllers.Application.dev(file)
 
 # UI
-GET     /                           controllers.Assets.at(path="/public/dist", file="index.html")
-GET     /*file                      controllers.Assets.at(path="/public/dist", file)
+GET     /                           controllers.PublicAssets.at(path="/public/dist", file="index.html")
+GET     /*file                      controllers.PublicAssets.at(path="/public/dist", file)
 
 # Assets
 # GET     /assets/*file               controllers.Assets.at(path="/public", file)

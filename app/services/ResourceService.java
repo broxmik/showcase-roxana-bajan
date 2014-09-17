@@ -10,4 +10,7 @@ public interface ResourceService {
 
     File getResource(String resource);
 
+    File getNotFoundFile();
+
+    File getServerErrorFile();
 }

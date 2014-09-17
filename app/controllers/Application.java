@@ -7,8 +7,6 @@ import services.ResourceService;
 import utils.Variables;
 
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 
 /**
  * Main controller for the application
@@ -16,10 +14,15 @@ import java.net.URLDecoder;
  */
 public class Application extends Controller {
 
-    @Inject
+
     private ResourceService resourceService;
 
-    public static Result index() {
+    @Inject
+    public Application(ResourceService resourceService){
+        this.resourceService = resourceService;
+    }
+
+    public Result index() {
         return ok("Work in progress");
     }
 
@@ -28,29 +31,19 @@ public class Application extends Controller {
      * @param resource name of the resource
      * @return dev interface
      */
-    public static Result dev(String resource) {
-
-        File notFound = new File(Variables.PATH_TO_DEV_UI + "404.html");
+    public Result dev(String resource) {
 
         // Only available in DEV
         if(play.api.Play.isDev(play.api.Play.current())) {
-
-            String fileName;
-            try {
-                fileName = URLDecoder.decode(resource, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                fileName = resource;
-            }
-            File file = new File(Variables.PATH_TO_DEV_UI + fileName);
+            File file = resourceService.getResource(resource);
             try {
                 return ok(file, true);
             } catch(Throwable t) {
-                return notFound(notFound, true);
+                return notFound(resourceService.getNotFoundFile(), true);
             }
-
         }
 
         // No dev
-        return notFound(notFound, true);
+        return notFound(resourceService.getNotFoundFile(), true);
     }
 }
