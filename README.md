@@ -1,2 +1,4 @@
-showcase-roxana-bajan
+Showcase project
 =====================
+Backend Play
+Frontend AngularJS
