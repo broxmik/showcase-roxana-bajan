@@ -2,13 +2,11 @@
 
 /**
  * @ngdoc function
- * @name uiApp.controller:MainCtrl
+ * @name uiApp.controller:PortfolioCtrl
  * @description
- * # MainCtrl
+ * # PortfolioCtrl
  * Controller of the uiApp
  */
 angular.module('uiApp')
-  .controller('MainCtrl', function ($scope) {
-
-
+  .controller('PortfolioCtrl', function ($scope) {
   });

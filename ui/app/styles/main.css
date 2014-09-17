@@ -8059,7 +8059,7 @@ input:focus {
   padding-top: 4px;
   color: #18bc9c;
 }
-.top-header .brand {
+.brand {
   transition-duration: 0.2s;
   background-color: #18bc9c;
   text-align: center;
@@ -8070,13 +8070,13 @@ input:focus {
   height: 25px;
   border-radius: 50%;
 }
-.top-header .brand a {
+.brand a {
   color: #f0f0f0;
 }
-.top-header .brand:hover {
+.brand:hover {
   background-color: #dddddd;
 }
-.top-header .brand:hover a {
+.brand:hover a {
   color: #18bc9c;
 }
 .navbar-brand {

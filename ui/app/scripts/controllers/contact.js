@@ -2,13 +2,11 @@
 
 /**
  * @ngdoc function
- * @name uiApp.controller:MainCtrl
+ * @name uiApp.controller:ContactCtrl
  * @description
- * # MainCtrl
+ * # ContactCtrl
  * Controller of the uiApp
  */
 angular.module('uiApp')
-  .controller('MainCtrl', function ($scope) {
-
-
+  .controller('ContactCtrl', function ($scope) {
   });
