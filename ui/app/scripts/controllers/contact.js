@@ -8,5 +8,6 @@
  * Controller of the uiApp
  */
 angular.module('uiApp')
-  .controller('ContactCtrl', function ($scope) {
-  });
+    .controller('ContactCtrl', function ($scope) {
+        $scope.message = 'This is the about showing value.';
+    });
