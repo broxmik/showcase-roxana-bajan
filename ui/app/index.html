@@ -17,7 +17,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div id="main-container">
+<div id="main-container" ng-controller="HeaderCtrl">
     <div class="top-header hidden-xs hidden-sm">
         <div class="container">
             <div class="pull-left">
@@ -50,10 +50,10 @@
             </div>
             <div class="navbar-collapse collapse pull-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a ng-href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a ng-href="#/about"><i class="fa fa-newspaper-o"></i> Resume</a></li>
-                    <li><a ng-href="#/portfolio"><i class="fa fa-folder-o"></i> Portfolio</a></li>
-                    <li><a ng-href="#/contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                    <li ng-class="{active:activeNav() == 'home'}"><a ng-href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li ng-class="{active:activeNav() == 'about'}"><a ng-href="#/about"><i class="fa fa-newspaper-o"></i> Resume</a></li>
+                    <li ng-class="{active:activeNav() == 'portfolio'}"><a ng-href="#/portfolio"><i class="fa fa-folder-o"></i> Portfolio</a></li>
+                    <li ng-class="{active:activeNav() == 'contact'}"><a ng-href="#/contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -78,7 +78,7 @@
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-XXXXX-X');
+    ga('create', 'UA-BROXS-C');
     ga('send', 'pageview');
 </script>
 
@@ -105,6 +105,7 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
+<script src="scripts/controllers/header.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/controllers/contact.js"></script>
