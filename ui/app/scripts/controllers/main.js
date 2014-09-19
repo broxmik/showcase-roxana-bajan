@@ -9,5 +9,19 @@
  */
 angular.module('uiApp')
     .controller('MainCtrl', function ($scope) {
-        $scope.message = 'This is the about showing value.';
+        var carousel = $('.carousel');
+        carousel.carousel({interval:3000});
+
+        $scope.goTo = function(number){
+            carousel.carousel(number);
+        };
+
+        $scope.next = function(){
+            carousel.carousel('next');
+        };
+
+        $scope.prev = function(){
+            carousel.carousel('prev');
+        };
+
     });
