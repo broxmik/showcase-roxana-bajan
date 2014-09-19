@@ -11,9 +11,6 @@ angular.module('uiApp')
     .controller('HeaderCtrl', function ($scope, $location) {
 
         $scope.activeNav = function() {
-            if ($location.path() === '/') {
-                return 'home';
-            }
             if($location.path() === '/about'){
                 return 'about';
             }
@@ -24,5 +21,18 @@ angular.module('uiApp')
                 return 'contact';
             }
             return 'home';
+        };
+
+        $scope.getTitle = function(){
+            if($location.path() === '/about'){
+                return 'Resume';
+            }
+            if($location.path() === '/portfolio'){
+                return 'Portfolio';
+            }
+            if($location.path() === '/contact'){
+                return 'Contact';
+            }
+            return 'Roxana Bajan Showcase Page';
         };
     });
