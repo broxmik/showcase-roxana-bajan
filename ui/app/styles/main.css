@@ -8088,6 +8088,9 @@ input:focus {
 #show-carousel {
   background-color: #ecf0f1;
 }
+.carousel-control {
+  cursor: pointer;
+}
 .carousel-control span {
   width: 30px;
   height: 30px;
