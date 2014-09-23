@@ -8,11 +8,10 @@ import services.impl.ResourceServiceImpl;
  * @author Roxana
  * @version 1.0
  */
-public class ApplicationModule extends AbstractModule {
+public class TestModule extends AbstractModule {
 
     @Override
     protected void configure() {
         bind(ResourceService.class).to(ResourceServiceImpl.class);
     }
-
 }

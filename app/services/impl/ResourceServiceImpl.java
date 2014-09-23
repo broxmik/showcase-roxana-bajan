@@ -1,5 +1,6 @@
-package services;
+package services.impl;
 
+import services.ResourceService;
 import utils.Variables;
 
 import java.io.File;
@@ -10,7 +11,7 @@ import java.net.URLDecoder;
  * @author Roxana
  * @version 1.0
  */
-public class ResourceServiceImpl implements ResourceService{
+public class ResourceServiceImpl implements ResourceService {
 
     @Override
     public File getResource(String resource) {

@@ -1,10 +1,10 @@
 package controllers;
 
 import com.google.inject.Inject;
+import play.api.Play;
 import play.mvc.Controller;
 import play.mvc.Result;
 import services.ResourceService;
-import utils.Variables;
 
 import java.io.File;
 
@@ -33,8 +33,8 @@ public class Application extends Controller {
      */
     public Result dev(String resource) {
 
-        // Only available in DEV
-        if(play.api.Play.isDev(play.api.Play.current())) {
+        // Only available in Dev and Test
+        if(!Play.isProd(Play.current())) {
             File file = resourceService.getResource(resource);
             try {
                 return ok(file, true);
