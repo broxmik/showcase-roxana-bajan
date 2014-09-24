@@ -1,40 +1,48 @@
-<div class="container">
-    <div id="show-carousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#show-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#show-carousel" data-slide-to="1" class=""></li>
-            <li data-target="#show-carousel" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="images/angular.png"  alt="AngularJS" class="center-block">
-                <div class="carousel-caption">
-                    <h1>AngularJS</h1>
+<div class="carousel-container visible-lg visible-md visible-sm">
+    <div class="container">
+        <div id="show-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#show-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#show-carousel" data-slide-to="1" class=""></li>
+                <li data-target="#show-carousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="https://angularjs.org"><img class="center-block" src="images/angular.png"  alt="AngularJS"></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.playframework.com"><img class="center-block" src="images/play.png" alt="Play2"></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.heroku.com"><img class="center-block" src="images/heroku.png" alt="Heroku"></a>
                 </div>
             </div>
-            <div class="item">
-                <img src="images/play.png" alt="Play2" class="center-block">
-                <div class="carousel-caption">
-                    <h1>Play Framework</h1>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/heroku.png" alt="Heroku" class="center-block">
-                <div class="carousel-caption">
-                    <h1>Heroku</h1>
-                </div>
-            </div>
+            <a class="left carousel-control" ng-click="prev()" role="button" data-slide="prev">
+                <span class="fa fa-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" ng-click="next()" role="button" data-slide="next">
+                <span class="fa fa-chevron-right"></span>
+            </a>
         </div>
-        <a class="left carousel-control" ng-click="prev()" role="button" data-slide="prev">
-            <span class="fa fa-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" ng-click="next()" role="button" data-slide="next">
-            <span class="fa fa-chevron-right"></span>
-        </a>
     </div>
+</div>
 
-    <h4>
-        <i class="fa fa-bicycle"></i> Work in progress...
-    </h4>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4 text-justify">
+            <h2>Scope</h2>
+            <p>This site is a showcase of my capacities to learn and create.<br>Also it's a way of testing for my curiosity and my skills in programming.</p>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4 col-lg-4 text-justify">
+            <h2>Career</h2>
+            <p>My objective, as a developer, is to demonstrate my abilities and passion for programming working in an environment in which I can optimize my skills and persevere in accumulating knowledge and bettering my practice.</p>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4 col-lg-4 text-justify">
+            <h2>Tech Details</h2>
+            <p>This application is deployed in Heroku as a Play Framework 2 App but with the twist of using AngularJS as front end. In the Portfolio section you will also see examples of widgets, programing concepts and hopefully lots of cool stuff.</p>
+        </div>
+    </div>
 </div>
