@@ -8113,3 +8113,6 @@ input:focus {
 .navbar-home {
   margin-bottom: 0;
 }
+.locality {
+  font-weight: bold;
+}
