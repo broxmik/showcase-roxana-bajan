@@ -8042,6 +8042,21 @@ input:focus {
 .popover {
   color: #2c3e50;
 }
+@media (min-width: 768px) {
+  .pull-right-sm {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .pull-right-md {
+    float: right;
+  }
+}
+@media (min-width: 1200px) {
+  .pull-right-lg {
+    float: right;
+  }
+}
 #main-container {
   margin: 0;
   padding: 0;
