@@ -18,49 +18,49 @@
 
 <!-- Add your site or application content here -->
 <div id="main-container" ng-controller="HeaderCtrl">
-    <div class="top-header hidden-xs hidden-sm">
-        <div class="container">
-            <div class="pull-left">
-                <a href="mailto:roxanabajan@gmail.com" class="header-item"><i class="fa fa-envelope"></i> roxanabajan@gmail.com</a>
+    <div class="navbar-fixed-top">
+        <div class="top-header hidden-xs hidden-sm">
+            <div class="container">
+                <div class="pull-left">
+                    <a href="mailto:roxanabajan@gmail.com" class="header-item"><i class="fa fa-envelope"></i> roxanabajan@gmail.com</a>
+                </div>
+                <div class="pull-right">
+                    <ul class="list-inline">
+                        <li class="brand"><a href="https://twitter.com/roxanabajan"><i class="fa fa-twitter"></i></a></li>
+                        <li class="brand"><a href="https://www.facebook.com/roxana.bajan"><i class="fa fa-facebook"></i></a></li>
+                        <li class="brand"><a href="https://plus.google.com/113333974159586031875"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="brand"><a href="http://www.youtube.com/user/broxmik"><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="pull-right">
-                <ul class="list-inline">
-                    <li class="brand"><a href="https://twitter.com/roxanabajan"><i class="fa fa-twitter"></i></a></li>
-                    <li class="brand"><a href="https://www.facebook.com/roxana.bajan"><i class="fa fa-facebook"></i></a></li>
-                    <li class="brand"><a href="https://plus.google.com/113333974159586031875"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="brand"><a href="http://www.youtube.com/user/broxmik"><i class="fa fa-youtube-play"></i></a></li>
-                </ul>
+        </div>
+        <div class="navbar-default" ng-class="{'navbar-home':activeNav() === 'home'}" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">
+                        <img class="img-circle" src="images/roxana.jpg" alt="I'm Roxana">
+                        Roxana Bajan
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse pull-right-sm pull-right-md pull-right-lg">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active:activeNav() === 'home'}"><a ng-href="#"><i class="fa fa-home"></i> Home</a></li>
+                        <li ng-class="{active:activeNav() === 'about'}"><a ng-href="#/about"><i class="fa fa-newspaper-o"></i> Resume</a></li>
+                        <li ng-class="{active:activeNav() === 'portfolio'}"><a ng-href="#/portfolio"><i class="fa fa-folder-o"></i> Portfolio</a></li>
+                        <li ng-class="{active:activeNav() === 'contact'}"><a ng-href="#/contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="navbar navbar-default navbar-static-top" ng-class="{'navbar-home':activeNav() === 'home'}" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand">
-                    <img class="img-circle" src="images/roxana.jpg" alt="I'm Roxana">
-                    Roxana Bajan
-                </a>
-            </div>
-            <div class="navbar-collapse collapse pull-right-sm pull-right-md pull-right-lg">
-                <ul class="nav navbar-nav">
-                    <li ng-class="{active:activeNav() === 'home'}"><a ng-href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li ng-class="{active:activeNav() === 'about'}"><a ng-href="#/about"><i class="fa fa-newspaper-o"></i> Resume</a></li>
-                    <li ng-class="{active:activeNav() === 'portfolio'}"><a ng-href="#/portfolio"><i class="fa fa-folder-o"></i> Portfolio</a></li>
-                    <li ng-class="{active:activeNav() === 'contact'}"><a ng-href="#/contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div ng-view=""></div>
-
+    <div id="main-view" ng-view=""></div>
 </div>
 
 

@@ -6,19 +6,37 @@
 @top-header-bg-c: #F0F0F0;
 @top-header-border-c: #DDDDDD;
 
+@media (max-width: @screen-xs-max) {
+  .pull-right-xs {
+    float: right;
+  }
+  #main-view {
+    margin-top: 60px;
+  }
+}
+
 @media (min-width: @screen-sm-min) {
   .pull-right-sm {
     float: right;
+  }
+  #main-view {
+    margin-top: 60px;
   }
 }
 @media (min-width: @screen-md-min) {
   .pull-right-md {
     float: right;
   }
+  #main-view {
+    margin-top: 110px;
+  }
 }
 @media (min-width: @screen-lg-min) {
   .pull-right-lg {
     float: right;
+  }
+  #main-view {
+    margin-top: 110px;
   }
 }
 
@@ -29,7 +47,7 @@
 
 .top-header {
   background-color: @top-header-bg-c;
-  border-bottom: 1px solid @top-header-border-c;
+  border-top: 1px solid @top-header-border-c;
   padding: 12px 0;
   height: 50px;
 

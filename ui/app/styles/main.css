@@ -8042,19 +8042,36 @@ input:focus {
 .popover {
   color: #2c3e50;
 }
+@media (max-width: 767px) {
+  .pull-right-xs {
+    float: right;
+  }
+  #main-view {
+    margin-top: 60px;
+  }
+}
 @media (min-width: 768px) {
   .pull-right-sm {
     float: right;
+  }
+  #main-view {
+    margin-top: 60px;
   }
 }
 @media (min-width: 992px) {
   .pull-right-md {
     float: right;
   }
+  #main-view {
+    margin-top: 110px;
+  }
 }
 @media (min-width: 1200px) {
   .pull-right-lg {
     float: right;
+  }
+  #main-view {
+    margin-top: 110px;
   }
 }
 #main-container {
@@ -8063,7 +8080,7 @@ input:focus {
 }
 .top-header {
   background-color: #f0f0f0;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
   padding: 12px 0;
   height: 50px;
 }
