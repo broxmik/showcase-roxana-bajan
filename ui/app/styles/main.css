@@ -8148,3 +8148,47 @@ input:focus {
 .locality {
   font-weight: bold;
 }
+.inner-view {
+  padding-top: 15px;
+}
+.edged-case {
+  height: 400px;
+  width: 275px;
+  border: thin solid #2c3e50;
+  padding: 8px;
+  margin: 5px;
+  background: #ffffff;
+  box-shadow: 0 1px 5px #b4bcc2;
+  -moz-box-shadow: 0 1px 5px #b4bcc2;
+}
+.edged-case:hover {
+  border: thin solid #18bc9c;
+}
+.edged-case:hover .case-paragraph {
+  border-top: thin solid #18bc9c;
+}
+.case-image {
+  width: 255px;
+  height: 140px;
+}
+.case-paragraph {
+  border-top: thin solid #b4bcc2;
+  display: inline-block;
+  /* Fallback for non-webkit */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  width: 260px;
+  height: 108.64285717px;
+  /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.42857143;
+  word-wrap: normal;
+  padding-top: 5px;
+}
+.case-action {
+  margin-top: 15px;
+}

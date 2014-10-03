@@ -130,3 +130,55 @@
 .locality {
   font-weight: bold;
 }
+
+.inner-view {
+  padding-top: 15px;
+}
+
+.edged-case{
+  height: 400px;
+  width: 275px;
+  border: thin solid @brand-primary;
+  padding: 8px;
+  margin: 5px;
+
+  background: @panel-bg;
+  box-shadow: 0 1px 5px @gray-light;
+  -moz-box-shadow: 0 1px 5px @gray-light;
+}
+
+.edged-case:hover {
+  border: thin solid @brand-success;
+
+  .case-paragraph {
+    border-top: thin solid @brand-success;
+  }
+}
+
+.case-image{
+  width: 255px;
+  height: 140px;
+}
+
+@lines-to-show: 5;
+
+.case-paragraph{
+  border-top: thin solid @gray-light;
+  display: inline-block; /* Fallback for non-webkit */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @lines-to-show;
+  -webkit-box-orient: vertical;
+  width: 260px;
+  height: @font-size-base*@line-height-base*@lines-to-show + 1.5px; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  word-wrap: normal;
+  padding-top: 5px;
+}
+
+.case-action {
+  margin-top: 15px;
+}
