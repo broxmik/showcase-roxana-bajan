@@ -33,7 +33,7 @@ angular
             })
             .when('/portfolio', {
                 templateUrl: 'views/portfolio.html',
-                controller: 'ContactCtrl'
+                controller: 'PortfolioCtrl'
             })
             .otherwise({
                 redirectTo: '/'
