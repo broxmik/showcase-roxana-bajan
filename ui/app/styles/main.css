@@ -8192,3 +8192,31 @@ input:focus {
 .case-action {
   margin-top: 15px;
 }
+.red-circle {
+  fill: #DF4949;
+  background: #DF4949;
+}
+.violet-circle {
+  fill: #9B59B6;
+  background: #9B59B6;
+}
+.blue-circle {
+  fill: #3498db;
+  background: #3498db;
+}
+.orange-circle {
+  fill: #E27A3F;
+  background: #E27A3F;
+}
+.yellow-circle {
+  fill: #EFC94C;
+  background: #EFC94C;
+}
+.rose-circle {
+  fill: #F495A3;
+  background: #F495A3;
+}
+.green-circle {
+  fill: #45B29D;
+  background: #45B29D;
+}

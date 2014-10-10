@@ -10,27 +10,43 @@
 angular.module('uiApp')
     .controller('HeaderCtrl', function ($scope, $location) {
 
+        function pathContains(category){
+            return $location.path().indexOf(category) > -1;
+        }
+
+        function isAbout() {
+            return pathContains('/about');
+        }
+
+        function isPortfolio() {
+            return pathContains('/portfolio');
+        }
+
+        function isContact() {
+            return pathContains('/contact');
+        }
+
         $scope.activeNav = function() {
-            if($location.path() === '/about'){
+            if(isAbout()){
                 return 'about';
             }
-            if($location.path() === '/portfolio'){
+            if(isPortfolio()){
                 return 'portfolio';
             }
-            if($location.path() === '/contact'){
+            if(isContact()){
                 return 'contact';
             }
             return 'home';
         };
 
         $scope.getTitle = function(){
-            if($location.path() === '/about'){
+            if(isAbout()){
                 return 'Resume';
             }
-            if($location.path() === '/portfolio'){
+            if(isPortfolio()){
                 return 'Portfolio';
             }
-            if($location.path() === '/contact'){
+            if(isContact()){
                 return 'Contact';
             }
             return 'Roxana Bajan Showcase Page';

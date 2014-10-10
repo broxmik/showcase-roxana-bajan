@@ -57,7 +57,7 @@ public class Global extends GlobalSettings {
                     in = new BufferedReader(new InputStreamReader(myURLConnection.getInputStream()));
                     String inputLine = in.readLine();
                     if (inputLine != null) {
-                        Logger.info("Retrieved content. Site is online.");
+                        Logger.trace("Retrieved content. Site is online.");
                     }
                 }finally {
                     if (in != null) {
