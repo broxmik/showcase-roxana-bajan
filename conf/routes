@@ -9,4 +9,4 @@ GET        /dev/*file                @controllers.Application.dev(file)
 
 # UI
 GET        /                         controllers.PublicAssets.at(path="/public/dist", file="index.html")
-GET        /*file/                   controllers.PublicAssets.at(path="/public/dist", file)
+GET        /*file                    controllers.PublicAssets.at(path="/public/dist", file)
