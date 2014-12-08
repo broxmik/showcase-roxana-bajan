@@ -39,6 +39,10 @@ angular
                 templateUrl: 'views/career-path.html',
                 controller: 'CareerPathCtrl'
             })
+            .when('/portfolio/calories', {
+              templateUrl: 'views/calories.html',
+              controller: 'CaloriesCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });

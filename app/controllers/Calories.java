@@ -27,8 +27,8 @@ public class Calories extends Controller {
                     .parallel()
                     .filter(s -> s != null && !s.trim().isEmpty())
                     .map(Food::new)
-                    .sorted(Comparator.comparingInt(Food::getCarbo).reversed())
-                    .limit(10)
+                    .sorted(Comparator.comparingInt(Food::getkCal).reversed())
+                    .limit(12)
                     .collect(Collectors.toList());
         } catch (IOException e) {
             Logger.error(e.getMessage(), e);

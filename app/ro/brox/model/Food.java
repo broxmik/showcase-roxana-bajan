@@ -16,7 +16,7 @@ public class Food {
 
     private String name;
     private String measure;
-    private double wheight;
+    private double weight;
     private int kCal;
     private int fat;
     private int carbo;
@@ -28,7 +28,7 @@ public class Food {
         if(split.length >= 6) {
             this.name = String.join(" ", Arrays.asList(split).subList(0, split.length - 6));
             this.measure = split[split.length-6];
-            this.wheight = Double.parseDouble(split[split.length-5]);
+            this.weight = Double.parseDouble(split[split.length-5]);
             this.kCal = Integer.parseInt(split[split.length-4]);
             this.fat = Integer.parseInt(split[split.length-3]);
             this.carbo = Integer.parseInt(split[split.length-2]);
@@ -55,12 +55,12 @@ public class Food {
         this.measure = measure;
     }
 
-    public double getWheight() {
-        return wheight;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setWheight(double wheight) {
-        this.wheight = wheight;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public int getkCal() {
@@ -106,7 +106,7 @@ public class Food {
         if (fat != food.fat) return false;
         if (kCal != food.kCal) return false;
         if (protein != food.protein) return false;
-        if (Double.compare(food.wheight, wheight) != 0) return false;
+        if (Double.compare(food.weight, weight) != 0) return false;
         if (measure != null ? !measure.equals(food.measure) : food.measure != null) return false;
         if (name != null ? !name.equals(food.name) : food.name != null) return false;
 
@@ -119,7 +119,7 @@ public class Food {
         long temp;
         result = name != null ? name.hashCode() : 0;
         result = 31 * result + (measure != null ? measure.hashCode() : 0);
-        temp = Double.doubleToLongBits(wheight);
+        temp = Double.doubleToLongBits(weight);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + kCal;
         result = 31 * result + fat;
